@@ -34,7 +34,6 @@ LOCAL_C_INCLUDES := \
     $(call include-path-for, audio-effects) \
     $(call include-path-for, audio-utils)
 
-# FIXME keep libmedia_native but remove libmedia after split
 LOCAL_SHARED_LIBRARIES := \
     libaudioutils \
     libcommon_time_client \
@@ -43,7 +42,6 @@ LOCAL_SHARED_LIBRARIES := \
     liblog \
     libbinder \
     libmedia \
-    libmedia_native \
     libnbaio \
     libhardware \
     libhardware_legacy \

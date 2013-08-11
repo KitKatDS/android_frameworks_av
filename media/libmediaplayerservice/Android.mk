@@ -31,7 +31,6 @@ LOCAL_SHARED_LIBRARIES :=       \
     libdl                       \
     libgui                      \
     libmedia                    \
-    libmedia_native             \
     libsonivox                  \
     libstagefright              \
     libstagefright_foundation   \

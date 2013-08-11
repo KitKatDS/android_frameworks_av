@@ -126,7 +126,6 @@ LOCAL_SHARED_LIBRARIES := \
         libicuuc \
         liblog \
         libmedia \
-        libmedia_native \
         libsonivox \
         libssl \
         libstagefright_omx \
