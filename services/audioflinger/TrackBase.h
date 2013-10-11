@@ -43,7 +43,7 @@ public:
                                 audio_format_t format,
                                 audio_channel_mask_t channelMask,
                                 size_t frameCount,
-#ifdef QCOM_HARDWARE
+#if defined(QCOM_HARDWARE) && !defined(ICS_AUDIO_BLOB)
                                 uint32_t flags,
 #endif
                                 const sp<IMemory>& sharedBuffer,
@@ -138,7 +138,7 @@ protected:
                                     // openRecord(), and then adjusted as needed
 
     bool                mStepServerFailed;
-#ifdef QCOM_HARDWARE
+#if defined(QCOM_HARDWARE) && !defined(ICS_AUDIO_BLOB)
     uint32_t            mFlags;
 #endif
     const int           mSessionId;
