@@ -1560,7 +1560,7 @@ sp<IAudioRecord> AudioFlinger::openRecord(
                 *sessionId = lSessionId;
             }
         }
-#if defined(QCOM_HARDWARE) && !defined(ICS_AUDIO_BLOB)
+#if defined(QCOM_HARDWARE) && !defined(LEGACY_QCOM_VOICE)
         // frameCount must be a multiple of input buffer size
         // Change for Codec type
         uint8_t channelCount = popcount(channelMask);
@@ -1594,7 +1594,7 @@ sp<IAudioRecord> AudioFlinger::openRecord(
             }
         }
         frameCount = ((frameCount - 1)/inFrameCount + 1) * inFrameCount;
-#elif defined(QCOM_HARDWARE) && defined(ICS_AUDIO_BLOB)
+#elif defined(QCOM_HARDWARE) && defined(LEGACY_QCOM_VOICE)
         if ((format == AUDIO_FORMAT_PCM_16_BIT) ||
             (format == AUDIO_FORMAT_PCM_8_BIT))
         {
